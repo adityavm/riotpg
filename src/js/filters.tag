@@ -9,7 +9,7 @@
 
 	<script>
 		var self = this,
-				model = opts.model;
+				model = filters;
 
 		self.filters = model.getFilters();
 
@@ -18,7 +18,7 @@
 			model.toggleFilter(f);
 		}
 
-		model.on("toggled", function(f){
+		model.on("filtertoggled", function(f){
 			console.log(f.getLabel(), "toggled");
 		})
 	</script>
